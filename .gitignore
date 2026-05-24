@@ -1,0 +1,18 @@
+# Xcode / SwiftPM
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj
+*.xcworkspace
+Packages/
+Package.resolved
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Env / secrets
+.env
+.env.*
