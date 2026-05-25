@@ -1,6 +1,6 @@
 # ScoovaGeocoding (Swift)
 
-Pelias-compatible geocoding client for `geocoding.scoo-va.info` — forward
+Pelias-compatible geocoding client for `api.scoo-va.info/api/v1/geocoding` — forward
 search, autocomplete, reverse, place lookup, structured search, and a
 synchronous batch endpoint (up to 100 mixed forward/reverse queries per
 request).
@@ -75,7 +75,7 @@ for row in batch.results {
 
 | arg              | type                  | default                              |
 | ---------------- | --------------------- | ------------------------------------ |
-| `baseURL`        | `URL`                 | `https://geocoding.scoo-va.info`     |
+| `baseURL`        | `URL`                 | `https://api.scoo-va.info/api/v1/geocoding` |
 | `apiKey`         | `String?`             | `SCOOVA_API_KEY` env, then `demo`    |
 | `locale`         | `String`              | `"en"`                               |
 | `androidPackage` | `String?`             | nil                                  |

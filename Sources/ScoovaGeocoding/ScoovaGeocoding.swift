@@ -190,7 +190,7 @@ public struct URLSessionTransport: GeocodingTransport {
 
 // ─── Client ───────────────────────────────────────────────────────────
 
-/// Pelias-compatible geocoding client for `geocoding.scoo-va.info`.
+/// Pelias-compatible geocoding client for `api.scoo-va.info/api/v1/geocoding`.
 ///
 ///     let client = ScoovaGeocodingClient(
 ///         apiKey: ProcessInfo.processInfo.environment["SCOOVA_API_KEY"],
@@ -215,7 +215,7 @@ public actor ScoovaGeocodingClient {
     private let transport: GeocodingTransport
 
     /// - parameters:
-    ///   - baseURL: gateway base. Defaults to `https://geocoding.scoo-va.info`.
+    ///   - baseURL: gateway base. Defaults to `https://api.scoo-va.info/api/v1/geocoding`.
     ///   - apiKey: Scoova API key. Sent as `X-API-Key`. If nil, the client
     ///     reads the `SCOOVA_API_KEY` environment variable, then falls
     ///     back to the public `demo` key (rate-limited).
@@ -226,7 +226,7 @@ public actor ScoovaGeocodingClient {
     ///     gateway's key-restriction enforcement.
     ///   - transport: pluggable HTTP layer for tests.
     public init(
-        baseURL: URL = URL(string: "https://geocoding.scoo-va.info")!,
+        baseURL: URL = URL(string: "https://api.scoo-va.info/api/v1/geocoding")!,
         apiKey: String? = nil,
         locale: String = "en",
         androidPackage: String? = nil,
