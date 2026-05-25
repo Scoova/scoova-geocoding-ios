@@ -28,8 +28,8 @@ public struct BoundaryRect: Sendable {
     }
 }
 
-/// One Pelias feature. `properties` is the full GeoJSON properties bag
-/// kept as a raw JSON map so callers can read anything Pelias returns
+/// One search feature. `properties` is the full GeoJSON properties bag
+/// kept as a raw JSON map so callers can read whatever the upstream service returns
 /// (gid, layer, source, accuracy, addendum, …) without the SDK needing
 /// to track every field. `@unchecked Sendable` because `[String: Any]`
 /// can't be statically proven sendable, but the bag is decoded once
@@ -190,7 +190,7 @@ public struct URLSessionTransport: GeocodingTransport {
 
 // ─── Client ───────────────────────────────────────────────────────────
 
-/// Pelias-compatible geocoding client for `api.scoo-va.info/api/v1/geocoding`.
+/// Geocoding geocoding client for `api.scoo-va.info/api/v1/geocoding`.
 ///
 ///     let client = ScoovaGeocodingClient(
 ///         apiKey: ProcessInfo.processInfo.environment["SCOOVA_API_KEY"],
@@ -334,7 +334,7 @@ public actor ScoovaGeocodingClient {
         return try await getGeo("/v1/reverse", items: items)
     }
 
-    /// Lookup one or more Pelias gids (e.g. `whosonfirst:locality:101751119`).
+    /// Lookup one or more place IDs (e.g. `<place-id>`).
     public func place(_ ids: [String]) async throws -> GeoResponse {
         try await getGeo("/v1/place", items: [
             URLQueryItem(name: "ids", value: ids.joined(separator: ",")),

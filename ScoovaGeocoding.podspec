@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'ScoovaGeocoding'
-  s.version          = '1.1.1'
-  s.summary          = 'Pelias-compatible geocoding — forward search, autocomplete, reverse, place lookup, structured search, batch.'
+  s.version          = '1.1.2'
+  s.summary          = 'Geocoding geocoding — forward search, autocomplete, reverse, place lookup, structured search, batch.'
 
   s.description      = <<-DESC
-    Pelias-compatible geocoding — forward search, autocomplete, reverse, place lookup, structured search, batch.
+    Geocoding geocoding — forward search, autocomplete, reverse, place lookup, structured search, batch.
 
     Pure Swift. Uses URLSession + async/await. Auto-detects
     `Bundle.main.bundleIdentifier` for the X-Ios-Bundle-Identifier

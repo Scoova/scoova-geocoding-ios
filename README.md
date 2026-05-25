@@ -1,6 +1,6 @@
 # ScoovaGeocoding (Swift)
 
-Pelias-compatible geocoding client for `api.scoo-va.info/api/v1/geocoding` — forward
+Geocoding geocoding client for `api.scoo-va.info/api/v1/geocoding` — forward
 search, autocomplete, reverse, place lookup, structured search, and a
 synchronous batch endpoint (up to 100 mixed forward/reverse queries per
 request).
@@ -56,7 +56,7 @@ let rev = try await client.reverse(lat: 48.8584, lon: 2.2945, size: 1)
 
 let suggestions = try await client.autocomplete("Tour Eif")
 
-let pl = try await client.place(["whosonfirst:locality:101751119"])
+let pl = try await client.place(["place data:locality:101751119"])
 
 let structured = try await client.searchStructured([
     "locality": "Cairo", "country": "EG",

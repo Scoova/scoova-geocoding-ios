@@ -89,11 +89,11 @@ final class ScoovaGeocodingTests: XCTestCase {
             apiKey: "k",
             transport: t
         )
-        _ = try await c.place(["whosonfirst:locality:101751119", "whosonfirst:country:85632343"])
+        _ = try await c.place(["place data:locality:101751119", "place data:country:85632343"])
         let qi = URLComponents(url: t.lastURL!, resolvingAgainstBaseURL: false)?.queryItems ?? []
         XCTAssertEqual(
             qi.first { $0.name == "ids" }?.value,
-            "whosonfirst:locality:101751119,whosonfirst:country:85632343"
+            "place data:locality:101751119,place data:country:85632343"
         )
     }
 
