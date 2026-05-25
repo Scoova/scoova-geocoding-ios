@@ -18,7 +18,7 @@ https://github.com/Scoova/scoova-geocoding-ios
 Or in `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/Scoova/scoova-geocoding-ios", from: "1.1.0"),
+.package(url: "https://github.com/Scoova/scoova-geocoding-ios", from: "1.1.2"),
 ```
 
 ```swift
